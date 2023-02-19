@@ -3,9 +3,11 @@ package com.examen.prueba.logic.repository;
 import com.examen.prueba.logic.model.Pelicula;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface PeliculaRepository extends CrudRepository<Pelicula, Integer> {
 
     @Query(value = "SELECT p FROM Pelicula p")
