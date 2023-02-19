@@ -6,8 +6,16 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "pelicula")
-@NamedQueries( {
-    @NamedQuery(name = "findAll", query = "SELECT p FROM Pelicula p")
+@NamedQueries({
+        @NamedQuery(name = "Pelicula.findAll", query = "SELECT p FROM Pelicula p"),
+        @NamedQuery(name = "Pelicula.findByIdPelicula", query="SELECT p FROM Pelicula p WHERE p.idPelicula = :idPelicula"),
+        @NamedQuery(name = "Pelicula.findByNombre", query = "SELECT p FROM Pelicula p WHERE p.nombre = :nombre"),
+        @NamedQuery(name = "Pelicula.findByDuracion", query = "SELECT p FROM Pelicula p WHERE p.duracion = :duracion"),
+        @NamedQuery(name = "Pelicula.findByClasificacion", query = "SELECT p FROM Pelicula p WHERE p.clasificacion = :clasificacion"),
+        @NamedQuery(name = "Pelicula.findByIdioma", query = "SELECT p FROM Pelicula p WHERE p.idioma = :idioma"),
+        @NamedQuery(name = "Pelicula.findByGenero", query = "SELECT p FROM Pelicula p WHERE p.genero = :genero"),
+        @NamedQuery(name = "Pelicula.findByFormato", query = "SELECT p FROM Pelicula p WHERE p.formato = :formato"),
+        @NamedQuery(name = "Pelicula.findBySinopsis", query = "SELECT p FROM Pelicula p WHERE p.sinopsis = :sinopsis")
 })
 public class Pelicula implements Serializable {
 
@@ -15,7 +23,7 @@ public class Pelicula implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "idPelicula")
-    private int idPelicula;
+    private Integer idPelicula;
 
     @Basic(optional = false)
     @Column(name = "nombre")
@@ -45,11 +53,15 @@ public class Pelicula implements Serializable {
     @Column(name = "sinopsis")
     private String sinopsis;
 
-    public int getIdPelicula() {
+    public Pelicula() {
+
+    }
+
+    public Integer getIdPelicula() {
         return idPelicula;
     }
 
-    public void setIdPelicula(int idPelicula) {
+    public void setIdPelicula(Integer idPelicula) {
         this.idPelicula = idPelicula;
     }
 
@@ -108,4 +120,17 @@ public class Pelicula implements Serializable {
     public void setSinopsis(String sinopsis) {
         this.sinopsis = sinopsis;
     }
+
+    public Pelicula(String nombre, String duracion, String clasificacion, String idioma, String genero, String formato,
+                    String sinopsis) {
+        super();
+        this.nombre = nombre;
+        this.duracion = duracion;
+        this.clasificacion = clasificacion;
+        this.idioma = idioma;
+        this.genero = genero;
+        this.formato = formato;
+        this.sinopsis = sinopsis;
+    }
+
 }
