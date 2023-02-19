@@ -31,12 +31,14 @@ public class PeliculaController {
     }
 
     @RequestMapping("findOne/{id}")
-    public String findByIdPelicula(@PathVariable String id, Model model) {
-        Pelicula findOnebyId = service.findByIdPelicula(Integer.parseInt(id));
+    public String findByIdPelicula(@PathVariable Integer id, Model model) {
+        Pelicula findOnebyId = service.findByIdPelicula(id);
 
-        System.out.println(findOnebyId.getNombre());
+        //System.out.println(findOnebyId.getNombre());
         model.addAttribute("findOnebyId", findOnebyId);
         return "/modulePeliculas/FindAll"; //TODO implementation html and route html for find one movie
     }
+
+
 
 }
