@@ -3,6 +3,8 @@ package com.examen.prueba.logic.model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.function.Function;
 
 @Entity
 @Table(name = "pelicula")
@@ -52,6 +54,9 @@ public class Pelicula implements Serializable {
     @Basic(optional = false)
     @Column(name = "sinopsis")
     private String sinopsis;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pelicula")
+    private List<Funciones> funciones;
 
     public Pelicula() {
 

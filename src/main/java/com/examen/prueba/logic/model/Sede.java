@@ -3,6 +3,7 @@ package com.examen.prueba.logic.model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "sede")
@@ -32,5 +33,6 @@ public class Sede implements Serializable {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "idCine")
     private Cine cine;
+
 
 }

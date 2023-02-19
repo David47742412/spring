@@ -25,6 +25,7 @@ public class Cine  implements Serializable {
     private String nombre;
 
     public Cine(String razonSocial, String nombre) {
+        super();
         this.setRazonSocial(razonSocial);
         this.setNombre(nombre);
     }

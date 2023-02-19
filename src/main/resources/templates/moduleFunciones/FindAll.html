@@ -3,12 +3,12 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="ISO-8859-1">
-  <title>Listar Peliculas</title>
+  <title>Find All Funciones</title>
 </head>
 <body>
 <div align="center">
   <h1>Peliculas</h1>
-  <a  th:href="@{/peliculas/nuevo}">Create Nueva Pelicula</a> <br />
+  <a  th:href="@{/peliculas/nuevo}">Create Nueva Funciones</a> <br />
   <br/>
   <table border="1" cellpadding="10">
     <thead>
@@ -22,13 +22,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="funciones : ${listCine}">
-      <td th:text="${cine.idCine}">identificador</td>
-      <td th:text="${cine.razonSocial}">Razon Social</td>
-      <td th:text="${cine.nombre}">Nombre</td>
-      <td><a th:href="@{/peliculas/actualizar/{id}(id=${cine.idCine})}">Actualizar</a>
+    <tr th:each="funciones : ${listFunciones}">
+      <td th:text="${funciones.getIdFunciones()}">identificador</td>
+      <td th:text="${funciones.getHoraInicio()}">hora de inicio</td>
+      <td th:text="${funciones.getHoraFin()}">hora de fin</td>
+      <td th:text="${funciones.getPrecio()}">Precio</td>
+      <td th:text="${funciones.getPelicula()}">pelicula</td>
+      <td th:text="${funciones.getSala()}">sala</td>
+      <td><a th:href="@{/peliculas/actualizar/{id}(id=${funciones.getIdFunciones()})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/peliculas/eliminar/{id}(id=${cine.idCine})}">Eliminar</a>
+        <a th:href="@{/peliculas/eliminar/{id}(id=${funciones.getIdFunciones()})}">Eliminar</a>
       </td>
     </tr>
     </tbody>
