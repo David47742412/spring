@@ -24,9 +24,12 @@ public class CineService {
     public Cine findOne(int id) {
         return this.repository.findOne(id);
     }
-
     public void insert(Cine cine) {
         this.repository.save(cine);
+    }
+
+    public void deleteById(Integer id) {
+        this.repository.deleteById(id);
     }
 
 }

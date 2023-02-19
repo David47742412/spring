@@ -25,7 +25,7 @@
       <td th:text="${cine.nombre}">Nombre</td>
       <td><a th:href="@{/cine/actualizar/{id}(id=${cine.idCine})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/moduleCine/eliminar/{id}(id=${cine.idCine})}">Eliminar</a>
+        <a th:href="@{/cine/delete/{id}(id=${cine.idCine})}">Eliminar</a>
       </td>
     </tr>
     </tbody>

@@ -69,7 +69,7 @@ public class PeliculaController {
     @RequestMapping(value ="/eliminar/{id}")
     public String eliminarPelicula(@PathVariable(name = "id") int id) {
         service.deleteById(id);
-        return "redirect:/peliculas/listarTodo";
+        return "redirect:/pelicula/findAll";
 
     }
 

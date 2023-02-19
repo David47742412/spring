@@ -52,6 +52,10 @@ public class categoriaController {
         return mav;
     }
 
-
+    @RequestMapping(value = "/delete/{id}")
+    public String delete(@PathVariable("id") Integer id) {
+        this.service.deleteById(id);
+        return "redirect:moduleCategoria/FindAll";
+    }
 
 }

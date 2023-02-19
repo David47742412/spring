@@ -28,4 +28,8 @@ public class CategoriaService {
         this.repository.save(categoria);
     }
 
+    public void deleteById(Integer id) {
+        this.repository.deleteById(id);
+    }
+
 }

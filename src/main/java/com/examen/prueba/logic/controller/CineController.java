@@ -55,4 +55,10 @@ public class CineController {
         return mav;
     }
 
+    @RequestMapping(value = "/delete/{id}")
+    public String deleteById(@PathVariable("id") Integer id) {
+        this.service.deleteById(id);
+        return "redirect:/cine/findAll";
+    }
+
 }

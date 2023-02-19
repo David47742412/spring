@@ -25,7 +25,7 @@
       <td th:text="${categoria.descripcion}">descripcion</td>
       <td><a th:href="@{/cine/actualizar/{id}(id=${categoria.idCategoria})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/moduleCine/eliminar/{id}(id=${categoria.idCategoria})}">Eliminar</a>
+        <a th:href="@{/categoria/delete/{id}(id=${categoria.idCategoria})}">Eliminar</a>
       </td>
     </tr>
     </tbody>

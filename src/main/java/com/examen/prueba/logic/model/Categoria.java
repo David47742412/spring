@@ -9,6 +9,7 @@ import java.io.Serializable;
 @NamedQueries({
     @NamedQuery(name = "Categoria.findAll", query = "SELECT C FROM Categoria C"),
     @NamedQuery(name = "Categoria.findOne", query = "SELECT C FROM Categoria C WHERE C.idCategoria = ?1"),
+    @NamedQuery(name = "Categoria.deleteById", query = "DELETE FROM Categoria C where C.idCategoria = ?1")
 })
 public class Categoria implements Serializable {
 
