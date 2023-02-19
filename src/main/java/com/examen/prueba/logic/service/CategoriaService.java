@@ -20,9 +20,9 @@ public class CategoriaService {
         return this.repository.findAll();
     }
 
-    //public Categoria findOne(int id) {
-      //  return this.repository.findOne(id);
-    //}
+    public Categoria findOne(int id) {
+        return this.repository.findOne(id);
+    }
 
     public void insert(Categoria categoria) {
         this.repository.save(categoria);

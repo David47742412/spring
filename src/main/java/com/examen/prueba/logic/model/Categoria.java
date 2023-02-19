@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Table(name = "categoria")
 @NamedQueries({
     @NamedQuery(name = "Categoria.findAll", query = "SELECT C FROM Categoria C"),
-    @NamedQuery(name = "Categoria.fidnOne", query = "SELECT C FROM Categoria C WHERE C.id = ?1"),
+    @NamedQuery(name = "Categoria.findOne", query = "SELECT C FROM Categoria C WHERE C.idCategoria = ?1"),
 })
 public class Categoria implements Serializable {
 

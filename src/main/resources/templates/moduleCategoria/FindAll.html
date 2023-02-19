@@ -8,7 +8,7 @@
 <body>
 <div align="center">
   <h1>Categoria</h1>
-  <a  th:href="@{/Categoria/create}">Create Nueva Categoria</a> <br />
+  <a  th:href="@{/categoria/create}">Create Nueva Categoria</a> <br />
   <br/>
   <table border="1" cellpadding="10">
     <thead>
@@ -20,12 +20,12 @@
     </thead>
     <tbody>
     <tr th:each="categoria : ${listCategoria}">
-      <td th:text="${listCategoria.idCategoria}">identificador</td>
-      <td th:text="${listCategoria.codigo}">Codigo</td>
-      <td th:text="${listCategoria.descripcion}">descripcion</td>
-      <td><a th:href="@{/cine/actualizar/{id}(id=${listCategoria.idCategoria})}">Actualizar</a>
+      <td th:text="${categoria.idCategoria}">identificador</td>
+      <td th:text="${categoria.codigo}">Codigo</td>
+      <td th:text="${categoria.descripcion}">descripcion</td>
+      <td><a th:href="@{/cine/actualizar/{id}(id=${categoria.idCategoria})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/moduleCine/eliminar/{id}(id=${listCategoria.idCategoria})}">Eliminar</a>
+        <a th:href="@{/moduleCine/eliminar/{id}(id=${categoria.idCategoria})}">Eliminar</a>
       </td>
     </tr>
     </tbody>
