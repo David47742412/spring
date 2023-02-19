@@ -12,9 +12,9 @@ import java.util.List;
 @Repository
 public interface FuncionesRepository extends JpaRepository<Funciones, Integer> {
 
-    @Query(name = "")
+    @Query(name = "Funciones.findAll")
     List<Funciones> findAll();
 
     @Query(name = "Funciones.insert")
-    void insert(String horaInicio, String horaFin, String precio, Sala sala, Pelicula pelicula);
+    void insert(Funciones funciones);
 }

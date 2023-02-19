@@ -8,7 +8,8 @@ import java.io.Serializable;
 @Table(name = "cine")
 @NamedQueries({
         @NamedQuery(name = "Cine.findAll", query = "SELECT c FROM Cine c"),
-        @NamedQuery(name = "Cine.insert", query = "INSERT INTO Cine(razonSocial, nombre) VALUES(:razonSocial, :nombre)")
+        @NamedQuery(name = "Cine.insert", query = "INSERT INTO Cine(razonSocial, nombre) VALUES(:razonSocial, :nombre)"),
+        @NamedQuery(name = "Cine.findOne", query = "SELECT C FROM Cine C WHERE C.id = ?1")
 })
 public class Cine  implements Serializable {
 

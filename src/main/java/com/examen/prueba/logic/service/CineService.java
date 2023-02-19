@@ -21,8 +21,12 @@ public class CineService {
         return this.repository.findAll();
     }
 
-    public void insert(String razonSocial, String nombre) {
-        this.repository.insert(razonSocial, nombre);
+    public Cine findOne(int id) {
+        return this.repository.findOne(id);
+    }
+
+    public void insert(Cine cine) {
+        this.repository.save(cine);
     }
 
 }

@@ -3,12 +3,12 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="ISO-8859-1">
-  <title>Listar Peliculas</title>
+  <title>Listar Cines</title>
 </head>
 <body>
 <div align="center">
-  <h1>Peliculas</h1>
-  <a  th:href="@{/peliculas/nuevo}">Create Nueva Cine</a> <br />
+  <h1>Cine</h1>
+  <a  th:href="@{/cine/create}">Create Nueva Cine</a> <br />
   <br/>
   <table border="1" cellpadding="10">
     <thead>
@@ -23,9 +23,9 @@
       <td th:text="${cine.idCine}">identificador</td>
       <td th:text="${cine.razonSocial}">Razon Social</td>
       <td th:text="${cine.nombre}">Nombre</td>
-      <td><a th:href="@{/peliculas/actualizar/{id}(id=${cine.idCine})}">Actualizar</a>
+      <td><a th:href="@{/cine/actualizar/{id}(id=${cine.idCine})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/peliculas/eliminar/{id}(id=${cine.idCine})}">Eliminar</a>
+        <a th:href="@{/moduleCine/eliminar/{id}(id=${cine.idCine})}">Eliminar</a>
       </td>
     </tr>
     </tbody>

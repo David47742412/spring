@@ -7,7 +7,8 @@ import java.io.Serializable;
 @Entity
 @Table(name = "categoria")
 @NamedQueries({
-
+    @NamedQuery(name = "Categoria.findAll", query = "SELECT C FROM Categoria C"),
+    @NamedQuery(name = "Categoria.fidnOne", query = "SELECT C FROM Categoria C WHERE C.id = ?1"),
 })
 public class Categoria implements Serializable {
 

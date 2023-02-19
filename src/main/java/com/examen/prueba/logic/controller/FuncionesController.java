@@ -1,7 +1,6 @@
 package com.examen.prueba.logic.controller;
 
 import com.examen.prueba.logic.model.Funciones;
-import com.examen.prueba.logic.model.genericViewClass.GenericClass;
 import com.examen.prueba.logic.service.FuncionesService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +15,6 @@ import java.util.List;
 public class FuncionesController  {
 
     private final FuncionesService service;
-
 
     public FuncionesController(FuncionesService service) {
         this.service = service;

@@ -3,7 +3,6 @@ package com.examen.prueba.logic.service;
 import com.examen.prueba.logic.model.Pelicula;
 import com.examen.prueba.logic.repository.PeliculaRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -52,6 +51,14 @@ public class PeliculaService  {
 
     public List<Pelicula> findBySinopsis(String sinopsis) {
         return this.repository.findBySinopsis(sinopsis);
+    }
+
+    public void crear(Pelicula pelicula) {
+        this.repository.save(pelicula);
+    }
+
+    public void deleteById(Integer id) {
+        this.repository.deleteById(id);
     }
 
 }

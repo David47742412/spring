@@ -8,7 +8,7 @@
 <body>
 <div align="center">
   <h1>Peliculas</h1>
-  <a  th:href="@{/peliculas/nuevo}">Create Nueva Pelicula</a> <br />
+  <a  th:href="@{/pelicula/nuevo}">Create Nueva Pelicula</a> <br />
   <br/>
   <table border="1" cellpadding="10">
     <thead>
@@ -34,9 +34,9 @@
       <td th:text="${pelicula.genero}">Genero</td>
       <td th:text="${pelicula.formato}">Formato</td>
       <td th:text="${pelicula.sinopsis}">Sinopsis</td>
-      <td><a th:href="@{/peliculas/actualizar/{id}(id=${pelicula.idPelicula})}">Actualizar</a>
+      <td><a th:href="@{/pelicula/actualizar/{id}(id=${pelicula.idPelicula})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/peliculas/eliminar/{id}(id=${pelicula.idPelicula})}">Eliminar</a>
+        <a th:href="@{/pelicula/eliminar/{id}(id=${pelicula.idPelicula})}">Eliminar</a>
       </td>
     </tr>
     </tbody>

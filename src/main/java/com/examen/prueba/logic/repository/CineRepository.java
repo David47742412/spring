@@ -18,5 +18,9 @@ public interface CineRepository extends JpaRepository<Cine, Integer> {
     @Modifying
     @Transactional
     @Query(name = "Cine.insert")
-    void insert(@Param("razonSocial") String razonSocial, @Param("nombre") String nombre);
+    void insert(Cine cine);
+
+    @Query(name = "Cine.findOne")
+    Cine findOne(int id);
+
 }

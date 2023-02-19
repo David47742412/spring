@@ -7,8 +7,8 @@
 </head>
 <body>
 <div align="center">
-  <h1>Peliculas</h1>
-  <a  th:href="@{/peliculas/nuevo}">Create Nueva Funciones</a> <br />
+  <h1>Funciones</h1>
+  <a  th:href="@{/moduleFunciones/nuevo}">Create Nueva Funciones</a> <br />
   <br/>
   <table border="1" cellpadding="10">
     <thead>
@@ -29,9 +29,9 @@
       <td th:text="${funciones.getPrecio()}">Precio</td>
       <td th:text="${funciones.getPelicula()}">pelicula</td>
       <td th:text="${funciones.getSala()}">sala</td>
-      <td><a th:href="@{/peliculas/actualizar/{id}(id=${funciones.getIdFunciones()})}">Actualizar</a>
+      <td><a th:href="@{/moduleFunciones/actualizar/{id}(id=${funciones.getIdFunciones()})}">Actualizar</a>
         &nbsp;&nbsp;&nbsp;
-        <a th:href="@{/peliculas/eliminar/{id}(id=${funciones.getIdFunciones()})}">Eliminar</a>
+        <a th:href="@{/moduleFunciones/eliminar/{id}(id=${funciones.getIdFunciones()})}">Eliminar</a>
       </td>
     </tr>
     </tbody>
